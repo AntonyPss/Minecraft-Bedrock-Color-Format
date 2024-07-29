@@ -4,7 +4,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #dcdbd7;
+  background-color: #d6d4c1;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #efefef;
+  background-color: #e5e7d8;
   padding: 12px;
   border-radius: 8px;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
@@ -72,6 +72,26 @@ body {
 
 .copy-button:hover {
   background-color: #0056b3;
+}
+
+.bottom-label {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.github-link {
+  text-decoration: none;
+  color: #313232;
+  margin: 4px;
+}
+
+.github-link:hover {
+  text-decoration: underline;
 }
 
 #error-message {
