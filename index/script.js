@@ -2,6 +2,7 @@ const colorPicker = document.getElementById('colorPicker');
 const formatText = document.getElementById('formatText');
 const copyButton = document.getElementById('copyButton');
 const errorMessage = document.getElementById('error-message');
+const toggleDarkModeButton = document.getElementById('toggleDarkMode');
 
 function updateColor() {
     const color = colorPicker.value;
@@ -56,4 +57,8 @@ copyButton.addEventListener('click', () => {
     } else {
         alert('Invalid format for copying');
     }
+});
+
+toggleDarkModeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
 });
