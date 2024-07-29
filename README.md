@@ -3,6 +3,8 @@ On this site you can select any color and use it for texts with customizable col
 
 This is only available for Minecraft Bedrock color format.
 
+https://antonypss.github.io/Minecraft-Bedrock-Color-Format/
+
 ## 🤔 How to use?
 1. The first thing you will see is a color picker, press it and a color selection box should appear.
 
