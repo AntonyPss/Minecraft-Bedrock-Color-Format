@@ -1,4 +1,32 @@
-/* Light Mode */
+:root {
+    /* Light Mode Css Values */
+    --container-border-radius: 6px;
+    --container-border-button: 4px;
+
+    --container-textbox-border: 4px;
+    --container-textbox-border-color: 1px solid #ccc;
+    --container-textbox-border-bottom: 2px solid #9d9d9d;
+    --container-textbox-border-hover: 1px solid #8b8b8b;
+    --container-textbox-border-bottom-hover: 2px solid #8b8b8b;
+
+    --color-button-background: #066cd9;
+    --color-button-background-hover: #035cbc;
+    --color-button-background-bottom: 2px solid #0150a3;
+
+    /* Dark Mode Css Values */
+    --container-border-radius-dark: 8px;
+    --container-border-button-dark: 4px;
+
+    --container-textbox-border-color-dark: 1px solid #666;
+    --container-textbox-border-bottom-dark: 2px solid #acacac;
+    --container-textbox-border-hover-dark: 1px solid #8b8b8b;
+    --container-textbox-border-bottom-hover-dark: 2px solid #8b8b8b;
+
+    --color-button-background-dark: #066cd9;
+    --color-button-background-hover-dark: #1573d8;
+    --color-button-background-bottom-dark: 2px solid #0764c8;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -16,7 +44,7 @@ body {
     align-items: center;
     background-color: #e5e7d8;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: var(--container-border-radius);
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s, background-color 0.3s;
 }
@@ -35,7 +63,7 @@ body {
     width: 96px;
     height: 96px;
     border: 2px solid #e1e1e1;
-    border-radius: 4px;
+    border-radius: var(--container-border-radius);
     margin: 4px;
     transition: border 0.3s;
 }
@@ -43,16 +71,16 @@ body {
 #formatText {
     width: 164px;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-bottom: 2px solid #9d9d9d;
-    border-radius: 4px;
+    border: var(--container-textbox-border-color);
+    border-bottom: var(--container-textbox-border-bottom);
+    border-radius: var(--container-textbox-border);
     margin: 4px;
     transition: border 0.3s, background-color 0.3s, color 0.3s;
 }
 
 #formatText:hover {
-    border: 1px solid #aaa;
-    border-bottom: 2px solid #7c7c7c;
+    border: var(--container-textbox-border-hover);
+    border-bottom: var(--container-textbox-border-bottom-hover);
 }
 
 #formatTextTitle {
@@ -65,17 +93,16 @@ body {
     padding: 6px;
     margin: 4px;
     border: none;
-    background-color: #066cd9;
+    background-color: var(--color-button-background);
     color: white;
-    border: 1px solid #4990db;
     border-bottom: 2px solid #0150a3;
-    border-radius: 4px;
+    border-radius: var(--container-border-button);
     cursor: pointer;
     transition: background-color 0.2s, border 0.2s;
 }
 
 .copy-button:hover {
-    background-color: #0056b3;
+    background-color: var(--color-button-background-hover);
 }
 
 .bottom-label {
@@ -109,21 +136,19 @@ body {
     padding: 8px;
     margin: 8px;
     border: none;
-    background-color: #066cd9;
+    background-color: var(--color-button-background);
     color: white;
-    border: 1px solid #4990db;
-    border-bottom: 2px solid #0150a3;
-    border-radius: 4px;
+    border-bottom: var(--color-button-background-bottom);
+    border-radius: var(--container-border-button);
     cursor: pointer;
     transition: background-color 0.2s, border 0.2s;
 }
 
 .toggle-theme-mode:hover {
-    background-color: #0056b3;
+    background-color: var(--color-button-background-hover);
 }
 
 /* Dark Mode */
-
 body.dark-mode {
     background-color: #2e2e2e;
     color: #d6d4c1;
@@ -139,10 +164,9 @@ body.dark-mode .color-picker {
 }
 
 body.dark-mode #formatText {
-    background-color: #e5e5e5;
     color: #2b2b2b;
-    border: 1px solid #666;
-    border-bottom: 2px solid #acacac;
+    border: var(--container-textbox-border-color-dark);
+    border-bottom: var(--container-textbox-border-bottom-dark);
 }
 
 body.dark-mode .github-link {
@@ -150,5 +174,5 @@ body.dark-mode .github-link {
 }
 
 body.dark-mode .error-message {
-    color: #f88;
+    color: rgb(255, 154, 154);
 }
