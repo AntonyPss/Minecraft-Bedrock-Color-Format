@@ -2,7 +2,6 @@ const colorPicker = document.getElementById('colorPicker');
 const formatText = document.getElementById('formatText');
 const copyButton = document.getElementById('copyButton');
 const errorMessage = document.getElementById('error-message');
-const toggleDarkModeButton = document.getElementById('toggleDarkMode');
 
 function updateColor() {
     const color = colorPicker.value;
@@ -29,7 +28,7 @@ function updatePreviewColor() {
         colorPicker.value = colorToHex(color);
         errorMessage.textContent = '';
     } else {
-        errorMessage.textContent = 'Invalid format';
+        errorMessage.textContent = 'Formato Inválido';
     }
 }
 
@@ -50,15 +49,11 @@ copyButton.addEventListener('click', () => {
     const textToCopy = formatText.value.trim();
     if (validateFormat(textToCopy)) {
         navigator.clipboard.writeText(textToCopy).then(() => {
-            alert('Color format copied: ' + textToCopy);
+            alert('Color de formato copiado: ' + textToCopy);
         }).catch(err => {
-            console.error('Error copying color format: ', err);
+            console.error('Color de formato no copiado: ', err);
         });
     } else {
-        alert('Invalid format for copying');
+        alert('Color de formato no inválido');
     }
-});
-
-toggleDarkModeButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
 });
