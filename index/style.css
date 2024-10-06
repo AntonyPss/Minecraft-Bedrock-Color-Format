@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #212123;
+    background-color: rgb(0.10, 0.10, 0.10);
     font-family: "Ubuntu Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
